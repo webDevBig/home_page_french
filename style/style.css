@@ -901,7 +901,6 @@ header.desctop {
     display: none
 }
 
-@media all and (max-width:340px) {}
 
 @media all and (min-width:769px) {
     body {
@@ -1416,7 +1415,3 @@ header.desctop {
         padding: 135px 80px 60px
     }
 }
-
-@media all and (min-width:1280px) and (max-width:1365px) {}
-
-@media all and (min-width:1112px) and (max-width:1279px) {}
