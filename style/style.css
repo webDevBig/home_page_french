@@ -459,13 +459,18 @@ button:active {
 .section4 {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     background-color: #F9F9F9;
     padding: 23px 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.11);
     border-bottom: 1px solid rgba(0, 0, 0, 0.11)
+}
+
+.section4 .section_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .section4 .h3 {
@@ -770,11 +775,16 @@ button:active {
 .section9 {
     width: 100%;
     display: flex;
+    padding: 17px 20px;
+    background-color: #F9F9F9
+}
+
+.section9 .section_content {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 17px 20px;
-    background-color: #F9F9F9
 }
 
 .section9 .row {
@@ -835,11 +845,16 @@ button:active {
 .footer_menu {
     width: 100%;
     display: flex;
+    background-color: #222;
+    padding: 28px 0 36px 0
+}
+
+.footer_menu .section_content {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #222;
-    padding: 28px 0 36px 0
 }
 
 .footer_menu .menu_list li {
@@ -999,7 +1014,9 @@ header.desctop {
     .section2 {
         padding: 122px 192px;
         border: none;
-        background-color: transparent
+        background-color: transparent;
+        max-width: 1440px;
+        margin: 0 auto;
     }
 
     .section2 .clm {
@@ -1040,8 +1057,10 @@ header.desctop {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0 80px;
-        justify-content: space-between;
-        align-items: flex-start
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1440px;
+        margin: 0 auto;
     }
 
     .section3 .img_box {
@@ -1053,7 +1072,7 @@ header.desctop {
     .section3 .img_box:first-of-type {
         width: 731.42px;
         height: 486.95px;
-        margin: 0 0 60px
+        margin: 0 60px 60px 0
     }
 
     .section3 .h1 {
@@ -1067,11 +1086,12 @@ header.desctop {
     }
 
     .section3 .img_card {
+        max-width: 1280px;
         height: 676px;
         filter: drop-shadow(0px 12px 16px rgba(0, 0, 0, 0.1));
         box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
         border-radius: 0px 0px 6px 6px;
-        margin: 0;
+        margin: 0px;
         padding: 0 0 40px;
         background-position: 50% 30%;
         background-size: 66%
@@ -1088,9 +1108,16 @@ header.desctop {
     }
 
     .section4 {
+        padding: 0;
+        margin: -232px auto 60px;
+        border-bottom: none;
+
+    }
+
+    .section4 .section_content {
+        max-width: 1440px;
+        margin: 0 auto;
         padding: 292px 180px 60px;
-        margin: -232px 0 60px;
-        border-bottom: none
     }
 
     .section4 hr {
@@ -1191,6 +1218,7 @@ header.desctop {
 
     .section7 .slider_box {
         width: 100%;
+        max-width: 1440px;
         padding: 0 120px
     }
 
@@ -1211,10 +1239,16 @@ header.desctop {
     }
 
     .section9 {
+        padding: 0
+    }
+
+    .section9 .section_content {
+        max-width: 1440px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 28px 192px
+        padding: 28px 192px;
+        margin: 0 auto;
     }
 
     .section9 .row:last-of-type {
@@ -1228,7 +1262,13 @@ header.desctop {
     }
 
     .footer_menu {
-        padding: 135px 192px 60px
+        padding: 0
+    }
+
+    .footer_menu .section_content {
+        max-width: 1440px;
+        padding: 135px 192px 60px;
+        margin: 0 auto;
     }
 
     .footer_menu .menu_list div.open_sub_menu::after {
@@ -1399,9 +1439,58 @@ header.desctop {
 
 }
 
-@media all and (min-width:769px) and (max-width:1024px) {
+@media all and (min-width:1112px) and (max-width:1439px) {
+    .section3 {
+        padding: 0 50px;
+    }
+
+    .section3 .img_box {
+        width: 45%;
+        height: 454.95px;
+    }
+
+    .section3 {
+        justify-content: space-between;
+    }
+
+    .section3 .img_box:first-of-type {
+        width: 51%;
+        height: 454.95px;
+        margin: 0 0px 40px 0;
+    }
+
+    .section5 .img_box:first-of-type,
+    .section5 .img_box {
+        width: 44vw;
+        height: 44vw;
+    }
+
+    .section7 .slider_box {
+        padding: 0;
+    }
+}
+
+@media all and (min-width:1112px) and (max-width:1279px) {
     .section2 {
-        padding: 122px 80px
+        padding: 122px 8vw;
+    }
+
+    .section4 .section_content {
+        padding: 292px 8vw 60px;
+    }
+
+    .section9 .section_content {
+        padding: 28px 8vw;
+    }
+
+    .footer_menu .section_content {
+        padding: 135px 8vw 60px;
+    }
+}
+
+@media all and (min-width:769px) and (max-width:1112px) {
+    .section2 {
+        padding: 122px 3vw
     }
 
     .section3 .img_box {
@@ -1415,7 +1504,12 @@ header.desctop {
     }
 
     .section3 {
-        padding: 0 50px
+        padding: 0 2vw;
+        justify-content: space-between;
+    }
+
+    .section3 .img_box:first-of-type {
+        margin: 0 0px 40px 0;
     }
 
     .section3 .img_box:first-of-type .h1 {
@@ -1423,7 +1517,11 @@ header.desctop {
     }
 
     .section4 {
-        padding: 292px 80px 60px
+        padding: 0
+    }
+
+    .section4 .section_content {
+        padding: 292px 3vw 60px
     }
 
     .section7 .slider_box {
@@ -1431,7 +1529,7 @@ header.desctop {
     }
 
     .section7 {
-        padding: 70px 50px
+        padding: 70px 2vw
     }
 
     .slider__slide {
@@ -1440,10 +1538,37 @@ header.desctop {
     }
 
     .section9 {
-        padding: 28px 80px
+        padding: 0
+    }
+
+    .section9 .section_content {
+        padding: 28px 3vw
     }
 
     .footer_menu {
-        padding: 135px 80px 60px
+        padding: 0
     }
+
+    .footer_menu .section_content {
+        padding: 135px 3vw 60px
+    }
+}
+
+@media all and (max-width:340px) {
+    .section1 .h1 {
+        font-size: 32px;
+    }
+
+    .appliquer {
+        width: 265px;
+    }
+
+    .section7 hr.big {
+        width: 262px;
+    }
+
+    .section9 hr {
+        width: 270px;
+    }
+
 }
