@@ -855,7 +855,7 @@ button:active {
     padding: 10px 30px;
 }
 
-.menu_list div.arrow_transform {
+.footer_menu .menu_list div.arrow_transform {
     background-color: #333333;
 }
 
