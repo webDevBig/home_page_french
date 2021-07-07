@@ -290,7 +290,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../img/plaqueimmat_slider_OK2.svg);
+/*    background-image: url(../img/plaqueimmat_slider_OK2.svg);*/
+    background-image: url(../img/section1_desc.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
