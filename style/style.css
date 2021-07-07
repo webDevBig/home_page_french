@@ -16,6 +16,14 @@ body {
 header {
     width: 100vw;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_row {
+    width: 100vw;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +37,7 @@ header {
     align-items: center
 }
 
-.menu p {
+.menu .p {
     font-style: italic;
     font-weight: 800;
     font-size: 16px;
@@ -192,7 +200,7 @@ header {
     list-style: none
 }
 
-.menu_list li {
+.menu_list .mobile_menu_li {
     width: 100%;
     padding: 10px 0
 }
@@ -240,7 +248,7 @@ header {
     height: auto
 }
 
-.sub_menu ul {
+.sub_menu .sub_menu_list {
     width: 100%;
     list-style: none;
     display: flex;
@@ -251,16 +259,16 @@ header {
     padding: 20px 0 14px 10px
 }
 
-.sub_menu ul li {
+.sub_menu .sub_menu_li {
     height: auto;
     padding: 0 0 10px
 }
 
-.sub_menu ul li:last-of-type {
+.sub_menu .sub_menu_li:last-of-type {
     padding: 0
 }
 
-.sub_menu a {
+.sub_menu .sub_menu_link {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -270,8 +278,8 @@ header {
     text-transform: uppercase
 }
 
-.sub_menu a:active,
-.sub_menu a:focus {
+.sub_menu .sub_menu_link:active,
+.sub_menu .sub_menu_link:focus {
     color: #4F4F4F
 }
 
@@ -343,7 +351,7 @@ button:active {
     border: none
 }
 
-.green_btn img {
+.green_btn img.lazyloaded {
     width: 16px;
     margin: 0 10px 0 0
 }
@@ -412,7 +420,8 @@ button:active {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    text-decoration: none;
 }
 
 .section3 .img_box:nth-child(2n) {
@@ -482,7 +491,7 @@ button:active {
     color: #000
 }
 
-.section4 hr {
+.section4 .hr {
     width: 43px;
     height: 4px;
     background-color: #333;
@@ -561,7 +570,7 @@ button:active {
     color: #000
 }
 
-.section6 hr {
+.section6 .hr {
     width: 43px;
     height: 4px;
     background-color: #333;
@@ -604,7 +613,7 @@ button:active {
     color: #000
 }
 
-.section7 hr {
+.section7 .hr {
     width: 43px;
     height: 4px;
     background-color: #333;
@@ -833,7 +842,7 @@ button:active {
     padding: 0 0 0 27px
 }
 
-.section9 hr {
+.section9 .hr {
     width: 314px;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.11);
@@ -857,8 +866,9 @@ button:active {
     align-items: flex-start;
 }
 
-.footer_menu .menu_list li {
+.footer_menu .menu_list_li {
     padding: 0;
+    width: 100%;
 }
 
 .footer_menu div.open_sub_menu {
@@ -874,7 +884,7 @@ button:active {
     background-color: #333333;
 }
 
-.footer_menu div.sub_menu a {
+.footer_menu .sub_menu_link {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -882,13 +892,13 @@ button:active {
     color: #FFF
 }
 
-.footer_menu .sub_menu ul {
+.footer_menu .sub_menu_list {
     border-bottom: 1px solid #fff;
     padding: 0px 0 17px 14px;
     margin: 6px 26px 10px 30px;
 }
 
-.footer_menu .sub_menu li {
+.footer_menu .sub_menu_li {
     padding: 0px 0 10px;
 }
 
@@ -896,7 +906,7 @@ button:active {
     filter: invert(1)
 }
 
-.footer_menu p {
+.footer_menu .p {
     font-style: italic;
     font-weight: 900;
     font-size: 12px;
@@ -926,7 +936,7 @@ body {
 }
 
 .my_account,
-header.desctop {
+.header_row.desctop {
     display: none
 }
 
@@ -947,8 +957,12 @@ header.desctop {
     header {
         position: absolute;
         top: 10px;
+    }
+
+    .header_row {
         padding: 18px 80px;
-        box-shadow: none
+        box-shadow: none;
+        max-width: 1440px;
     }
 
     .logo,
@@ -974,7 +988,7 @@ header.desctop {
         color: #FFF
     }
 
-    .my_account img {
+    .my_account .my_account_logo {
         margin: 0 10px 2px 0
     }
 
@@ -1280,30 +1294,30 @@ header.desctop {
         height: fit-content
     }
 
-    .footer_menu .sub_menu ul {
+    .footer_menu .sub_menu_list {
         padding: 16px 0 0;
         border: none;
         margin: 0;
     }
 
-    .footer_menu .menu_list li {
+    .footer_menu .menu_list_li {
         width: fit-content;
         padding: 0
     }
 
-    .footer_menu .sub_menu ul li {
+    .footer_menu .sub_menu_li {
         padding: 0 0 10px
     }
 
-    .footer_menu div.sub_menu a {
+    .footer_menu .sub_menu_link {
         padding: 0 0 2px;
     }
 
-    .footer_menu div.sub_menu a:hover {
+    .footer_menu .sub_menu_link:hover {
         border-bottom: 1px solid white;
     }
 
-    .footer_menu p {
+    .footer_menu .p {
         margin: 60px auto 0
     }
 
@@ -1311,7 +1325,7 @@ header.desctop {
         padding: 0;
     }
 
-    header.desctop {
+    .header_row.desctop {
         display: flex;
         justify-content: center;
         top: 68px;
@@ -1327,7 +1341,7 @@ header.desctop {
         align-items: flex-start
     }
 
-    .desctop_menu_list li {
+    .desctop_menu_li {
         padding: 6px 37px 6px 14px;
         display: flex;
         justify-content: flex-start;
@@ -1337,7 +1351,7 @@ header.desctop {
         transition: background-color .1s
     }
 
-    .desctop_menu_list li::after {
+    .desctop_menu_li::after {
         content: "";
         background-image: url(../img/arrow.svg);
         background-position: center;
@@ -1351,16 +1365,16 @@ header.desctop {
         filter: invert(1)
     }
 
-    .desctop_menu_list li:hover {
+    .desctop_menu_li:hover {
         background-color: #FFF
     }
 
-    .desctop_menu_list li:hover::after {
+    .desctop_menu_li:hover::after {
         filter: invert(0);
         transform: rotate(180deg)
     }
 
-    .desctop_menu_list div {
+    .desctop_menu_row {
         font-style: normal;
         font-weight: 500;
         font-size: 13px;
@@ -1375,16 +1389,16 @@ header.desctop {
         transition: color .3s
     }
 
-    .desctop_menu_list li:hover div {
+    .desctop_menu_li:hover .desctop_menu_row {
         color: #000
     }
 
-    .desctop_menu_list div img {
+    .desctop_menu_row img {
         margin: 0 5px 0;
         transition: filter .3s
     }
 
-    .desctop_menu_list li:hover img {
+    .desctop_menu_li:hover img {
         filter: invert(1)
     }
 
@@ -1395,16 +1409,17 @@ header.desctop {
         justify-content: flex-start;
         align-items: flex-start;
         width: max-content;
+        min-width: 100%;
         position: absolute;
         top: 28px;
         left: 0
     }
 
-    .desctop_menu_list li:hover .desctop_submenu_list {
+    .desctop_menu_li:hover .desctop_submenu_list {
         display: flex
     }
 
-    .desctop_submenu_list li {
+    .desctop_submenu_li {
         background-color: #FFF;
         padding: 15px 14px;
         cursor: pointer;
@@ -1412,29 +1427,38 @@ header.desctop {
         transition: none
     }
 
-    .desctop_submenu_list li a {
+    .desctop_submenu_link {
         font-style: normal;
         font-weight: 500;
         font-size: 12px;
         line-height: 20px;
-        color: #000
+        color: #000;
+        text-decoration: none;
     }
 
-    .desctop_submenu_list li::after {
+    .desctop_submenu_li::after {
         display: none
     }
 
-    .desctop_submenu_list li:hover {
+    .desctop_submenu_li:hover {
         background-color: #222;
         box-shadow: inset 0px 0px 10px #000
     }
 
-    .desctop_submenu_list li:hover a {
+    .desctop_submenu_li:hover .desctop_submenu_link {
         color: white
     }
 
     .menu_list div.arrow_transform {
         background-color: transparent;
+    }
+
+    a.desctop_menu_row {
+        text-decoration: none;
+    }
+
+    .desctop_menu_li:last-of-type::after {
+        display: none;
     }
 
 }
