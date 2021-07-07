@@ -684,6 +684,11 @@ button:active {
     padding: 30px
 }
 
+.slider__slide[data-aos=zoom-in-up] {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+}
+
 .slider__slide .title {
     font-style: normal;
     font-weight: 600;
@@ -1221,6 +1226,11 @@ body {
         width: 315px;
         padding: 24px 0;
         border-top: 1px solid rgba(0, 0, 0, 0.11)
+    }
+
+    .slider__slide[data-aos=zoom-in-up] {
+        opacity: 1;
+        transform: translate3d(0, 100px, 0) scale(.6);
     }
 
     .right-arrow,
