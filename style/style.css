@@ -290,7 +290,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-/*    background-image: url(../img/plaqueimmat_slider_OK2.svg);*/
+    /*    background-image: url(../img/plaqueimmat_slider_OK2.svg);*/
     background-image: url(../img/section1_desc.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -304,7 +304,7 @@ header {
     font-size: 36px;
     line-height: 44px;
     text-align: center;
-    color: #FFF
+    color: #FFF;
 }
 
 .btn {
@@ -1010,7 +1010,10 @@ body {
         max-height: 912px;
         padding: 0;
         justify-content: center;
-        background-image: url(../img/section1_desc.svg)
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position: inherit;
+        /*        background-image: url(../img/section1_desc.svg)*/
     }
 
     .section1 .h1 {
