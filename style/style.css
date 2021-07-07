@@ -282,8 +282,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-/*    background-image: url(../img/plaqueimmat_slider_OK2.svg);*/
-    background-image: url(../img/plaqueimmat_slider_OK2.png);
+    background-image: url(../img/plaqueimmat_slider_OK2.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -840,7 +839,11 @@ button:active {
     justify-content: flex-start;
     align-items: flex-start;
     background-color: #222;
-    padding: 28px 26px 36px 30px
+    padding: 28px 0 36px 0
+}
+
+.footer_menu .menu_list li {
+    padding: 0;
 }
 
 .footer_menu div.open_sub_menu {
@@ -848,7 +851,12 @@ button:active {
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
-    color: #FFF
+    color: #FFF;
+    padding: 10px 30px;
+}
+
+.menu_list div.arrow_transform {
+    background-color: #333333;
 }
 
 .footer_menu div.sub_menu a {
@@ -861,7 +869,12 @@ button:active {
 
 .footer_menu .sub_menu ul {
     border-bottom: 1px solid #fff;
-    padding: 17px 0 17px 14px
+    padding: 0px 0 17px 14px;
+    margin: 6px 26px 10px 30px;
+}
+
+.footer_menu .sub_menu li {
+    padding: 0px 0 10px;
 }
 
 .footer_menu .menu_list div.open_sub_menu::after {
@@ -1229,7 +1242,8 @@ header.desctop {
 
     .footer_menu .sub_menu ul {
         padding: 16px 0 0;
-        border: none
+        border: none;
+        margin: 0;
     }
 
     .footer_menu .menu_list li {
@@ -1241,8 +1255,20 @@ header.desctop {
         padding: 0 0 10px
     }
 
+    .footer_menu div.sub_menu a {
+        padding: 0 0 2px;
+    }
+
+    .footer_menu div.sub_menu a:hover {
+        border-bottom: 1px solid white;
+    }
+
     .footer_menu p {
         margin: 60px auto 0
+    }
+
+    .footer_menu div.open_sub_menu {
+        padding: 0;
     }
 
     header.desctop {
@@ -1366,6 +1392,11 @@ header.desctop {
     .desctop_submenu_list li:hover a {
         color: white
     }
+
+    .menu_list div.arrow_transform {
+        background-color: transparent;
+    }
+
 }
 
 @media all and (min-width:769px) and (max-width:1024px) {
