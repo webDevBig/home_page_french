@@ -454,7 +454,8 @@ button:active {
     justify-content: space-between;
     align-items: center;
     padding: 0 0 30px;
-    margin: 20px 0 0
+    margin: 20px 0 0;
+    text-decoration: none;
 }
 
 .section3 .img_card .h1 {
